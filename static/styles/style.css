@@ -1,0 +1,24 @@
+.credits {
+    color: grey;
+    font-size: small;
+}
+.credits a {
+    color: grey;
+}
+.credits a:hover {
+    color: blue;
+}
+
+.profile_image {
+    max-width: 30%;
+    max-height: 40%;
+}
+
+nav ul li {
+    padding: 0px 30px 0px 30px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+}

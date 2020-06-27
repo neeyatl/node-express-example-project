@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User {{username}}</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    {{>navBar}}
+    <div class="container">
+        <p>{{timestamp}}</p>
+        <h1>Name: {{name}}</h1>
+        <img class="profile_image" src="{{img_link}}" alt="Profile image">
+        <p class="credits">{{img_credits}}</p>
+        <h2>Company: {{company}}</h2>
+        <h3>Languages:</h3>
+        <ol>
+            {{#languages}}
+            <h4><li><h3>{{.}}</h3></li></h4>
+            {{/languages}}
+        </ol><br>
+        
+        {{>addProfile}}
+        
+        <br><br>
+        <a href="/users">👈 Go to all users page</a>
+        <br><br>
+    </div>
+    {{>copyrightfooter}}
+</body>
+</html>

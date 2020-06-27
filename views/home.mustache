@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    {{>navBar}}
+    <img src="/images/node-js-cover.jpg" alt="Cover Image" width="100%" height="100%">
+    <div class="container">
+        <br>
+        <div>
+            <img src="{{{img_metadata.profile_image}}}" class="profile_image" alt="Profile Image">
+            <p class="credits">
+                Image Credits: <a href="{{{img_metadata.credit_link}}}" target="_blank">{{img_metadata.credit_text}}</a>
+            </p>
+        </div>
+        <h1>{{greeting}}</h1>
+        <p>{{intro}}</p>
+        <ul>
+            {{#languages}}
+            <li>{{name}}, {{profeciency}} profeciency</li>
+            {{/languages}}
+        </ul><br>
+        
+        <br><hr>
+        <a href="/register/newsletter">Subscribe to our newsletter</a><br>
+        <br><br>
+    </div>
+    {{>copyrightfooter}}
+</body>
+</html>
